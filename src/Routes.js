@@ -1,15 +1,16 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./components/Login/Login";
-import Index from "./components/Index/Index";
-import Consult_Device from "./components/Consult_Device/Consult_Device";
-import Consult_Pack from "./components/Consult_Pack/Consult_Pack";
-import Users from "./components/Users/Users";
-import RegisterPack from "./components/RegisterPack/RegisterPack";
-import RegisterDevice from "./components/RegisterDevice/RegisterDevice";
-import PrivateRoute from "./components/PrivateRoute";
-import DeviceList from "./components/Consult_Device/DeviceList";
-import UpdatePack from "./components/UpdatePack/UpdatePack";
+import Alunos from "./components/Alunos/Cadastrar_Aluno";
+import Alunos2 from "./components/Alunos/Consultar_Aluno";
+import Docentes from "./components/Docentes/Cadastrar_Docente";
+import Docentes2 from "./components/Docentes/Consultar_Docente";
+import Escola2 from "./components/Escolas/Consultar_Escola";
+import Turma2 from "./components/Turmas/Consultar_Turma";
+import Index from "./Index/Index";
+import EsolaCad from "./components/Escolas/Cadastrar_Escola";
+import Turma1 from "./components/Turmas/Cadastrar_Turma";
+// import PrivateRoute from "./components/PrivateRoute";
 
 const Routes = () => {
 
@@ -17,15 +18,16 @@ const Routes = () => {
         <BrowserRouter>
             <Switch>
                 <Route component={Login} path="/" exact />
-                <PrivateRoute component={Index} path="/index" />
-                <PrivateRoute component={Consult_Device} path="/consult-device" />
-                <PrivateRoute component={Consult_Pack} path="/consult-pack" />
-                <PrivateRoute component={Users} path="/users" />
-                <PrivateRoute component={RegisterPack} path="/register-pack" />
-                <PrivateRoute component={RegisterDevice} path="/register-device" />
-                <PrivateRoute component={DeviceList} path="/device-list" />
-                <PrivateRoute component={UpdatePack} path="/update-pack" />
-            </Switch>
+                <Route component={Alunos} path="/cadastro-aluno" />
+                <Route component={Docentes} path="/cadastro-docente" />
+                <Route component={Index} path="/index" />  
+                <Route component={Docentes2} path="/consulta-docente" />
+                <Route component={Alunos2} path="/consulta-aluno" />
+                <Route component={Escola2} path="/consulta-escola" />
+                <Route component={Turma2} path="/consulta-turma" />
+                <Route component={EsolaCad} path="/cadastro-escola" />
+                <Route component={Turma1} path="/cadastro-turma" />
+            </Switch> 
         </BrowserRouter>
     )
 }

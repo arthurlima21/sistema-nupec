@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 import { Image, Card } from "react-bootstrap";
 // import api from "../../api/api";
 
-function Login() {
+function Consultar_Docente() {
 
     return (
         <div className="App">
@@ -19,7 +19,7 @@ function Login() {
                                 <Image className="logo" src="maps.png" rounded style={{ width: '4rem' }} />
                                 <div className="row col-12 justify-content-md-center" >
                                     <h2>
-                                        <span className="font-weight-bold">SISTEMA NUPEC</span>
+                                        <span className="font-weight-bold">CONSULTAR DOCENTE</span>
                                     </h2>
                                 </div>
 
@@ -28,12 +28,11 @@ function Login() {
                                         <Form.Row >
                                             <Form.Group as={Col} controlId="formGridText">
                                                 <Form.Label></Form.Label>
-                                                <Form.Control type="email" required placeholder="Email" />
+                                                <Form.Control type="text" required placeholder="MATRICULA" />
                                                 <Form.Label></Form.Label>
-                                                <Form.Control type="password" placeholder="Senha" />
                                             </Form.Group>
                                         </Form.Row>
-                                        <Button type="submit" variant="ligth" className="button" size="lg" block >ENTRAR</Button>
+                                        <Button type="submit" variant="ligth" className="button" size="lg" block >CONSULTAR</Button>
                                     </Form>
                                 </Col>
                             </Card.Body>
@@ -45,4 +44,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default Consultar_Docente;
